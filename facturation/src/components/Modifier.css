@@ -10,8 +10,8 @@
     margin-top: 2em;
 }
 
-.ModifierFacture-Line > input{
-    width: 45%;
+.ModifierFacture-Line  input{
+    width: 100%;
 }
 
 .ModifierFacture-Line input,.ModifierFacture-Line textarea{
@@ -182,6 +182,7 @@
 #ModifierFacture-Tax{
     width: 3em;
 }
+
 
 .react-datalist-input__listbox-option {
     border:  2px solid var(--Gray);

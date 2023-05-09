@@ -10,8 +10,8 @@
     margin-top: 2em;
 }
 
-.CreeFacture-Line > input{
-    width: 45%;
+.CreeFacture-Line input{
+    width: 100%;
 }
 
 .CreeFacture-Line input,.CreeFacture-Line textarea{

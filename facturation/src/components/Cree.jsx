@@ -48,23 +48,28 @@ export default function CreeFacture() {
         update();
     }
     
-    const Cree = async ()=>{
+    const Cree = async (redirect=true)=>{
         if(!ProduitsCommander[0] || !ClientName){
             return
         }
+        let id_client = Facture.id_client;
         if (!Clients.filter(e=>e.value === ClientName).length){
-            await axios.post('//localhost:4444/client',{ClientName,ClientAddress});
+            id_client = (await axios.post('//localhost:4444/client',{ClientName,ClientAddress})).data.data.insertId;
+            console.log(id_client)
         }
 
-        await axios.post('//localhost:4444/facture',{...Facture,no_inv:`F${dt.getFullYear()}${Facture.no_inv}`,Taxes:Tax,Total:ProduitsCommander.reduce((prev,curr,indx)=>ProduitsCommander[indx].Total+prev,0),Date_inv:`${dt.getFullYear()}-${dt.getMonth()+1}-${dt.getDate()}`,ProduitsCommander});
+        await axios.post('//localhost:4444/facture',{...Facture,id_client,no_inv:`F${dt.getFullYear()}${Facture.no_inv}`,Taxes:Tax,Total:ProduitsCommander.reduce((prev,curr,indx)=>ProduitsCommander[indx].Total+prev,0),Date_inv:`${dt.getFullYear()}-${dt.getMonth()+1}-${dt.getDate()}`,ProduitsCommander});
 
         await axios.post('//localhost:4444/societe',Societe);
-        
+
+        if(redirect){
+            Navigator('/facture/gere');
+        }
 
     }
 
     const Print = async ()=>{
-        await Cree();
+        await Cree(false);
         const PageToPrint = document.getElementById('CreeFacture-Print-page');
         PageToPrint.src = `//${window.location.host}/facture/view/F${dt.getFullYear()}${Facture.no_inv}`;
         const LoadingWaiter = ()=>{
@@ -156,6 +161,7 @@ export default function CreeFacture() {
                     items={Categories}
                     showLabel={false}
                     onSelect={item=>{}}
+                    style={{ width:"30%" }}
                 />
             <DatalistInput
                     placeholder="Description"
@@ -166,11 +172,11 @@ export default function CreeFacture() {
                     onSelect={item=>{
                         SetProduitPrice(item.Price);
                     }}
-                    style={Categorie ? null : { visibility:'hidden' }}
+                    style={Categorie ? { width:"30%" } : { visibility:'hidden' }}
                     
                 />
-            <input type='text' placeholder='Price' style={ProduitDescription && Categorie ? null : { visibility:'hidden' }} value={ProduitPrice} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitPrice(e.target.value) : ''}}/>
-            <input type='text' placeholder='Qty.' style={ProduitPrice && ProduitDescription && Categorie ? null : { visibility:'hidden' }} value={ProduitQty} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitQty(e.target.value) : ''}}/>
+            <input type='text' placeholder='Price' style={ProduitDescription && Categorie ? { width:'20%' } : { visibility:'hidden' }} value={ProduitPrice} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitPrice(e.target.value) : ''}}/>
+            <input type='text' placeholder='Qty.' style={ProduitPrice && ProduitDescription && Categorie ? {width:'20%'} : { visibility:'hidden' }} value={ProduitQty} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitQty(e.target.value) : ''}}/>
             <img src={Add} alt="Add Product" style={Number(ProduitQty) && ProduitPrice && ProduitDescription && Categorie ? null : { visibility:'hidden' }} onClick={AjouterProd} width={'40px'} />
         </div>
         <div className="CreeFacture-Line">

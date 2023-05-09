@@ -164,8 +164,8 @@ export default function ModifierFacture() {
                     style={Categorie ? null : { visibility:'hidden' }}
                     
                 />
-            <input type='text' placeholder='Price' style={ProduitDescription && Categorie ? null : { visibility:'hidden' }} value={ProduitPrice} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitPrice(e.target.value) : ''}}/>
-            <input type='text' placeholder='Qty.' style={ProduitPrice && ProduitDescription && Categorie ? null : { visibility:'hidden' }} value={ProduitQty} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitQty(e.target.value) : ''}}/>
+            <input type='text' placeholder='Price' style={ProduitDescription && Categorie ? { width:'20%' } : { visibility:'hidden' }} value={ProduitPrice} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitPrice(e.target.value) : ''}}/>
+            <input type='text' placeholder='Qty.' style={ProduitPrice && ProduitDescription && Categorie ? { width:'20%' } : { visibility:'hidden' }} value={ProduitQty} onChange={(e)=>{!isNaN(Number(e.target.value)) ? SetProduitQty(e.target.value) : ''}}/>
             <img src={Add} alt="Add Product" style={Number(ProduitQty) && ProduitPrice && ProduitDescription && Categorie ? null : { visibility:'hidden' }} onClick={AjouterProd} width={'40px'} />
         </div>
         <div className="ModifierFacture-Line">
