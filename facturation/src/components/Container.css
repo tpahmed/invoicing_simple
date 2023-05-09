@@ -1,0 +1,43 @@
+.Container{
+    position: absolute;
+    transition: all .7s ease;
+    width: 100%;
+    left: 50%;
+    height: 78em;
+    background-color: var(--White);
+    border-radius: .4em;
+    padding: 1em;
+    overflow: auto;
+    margin-top: 1em;
+    max-width: 880px;
+    transform: translateX(-50%);
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+
+@media screen and (min-width:1115px) {
+    .SideBar:hover + .Container{
+        width: 80%;
+        left: 15%;
+    
+    }
+    
+}
+@media screen and (max-width:763px) {
+    .Container{
+        width: 100%;
+    
+    }
+    
+}

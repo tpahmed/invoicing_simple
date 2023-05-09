@@ -1,0 +1,244 @@
+.GereFacture{
+    width: 100%;
+    height: 100%;
+    /* padding-top: 1em; */
+}
+
+.GereFacture-Options{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
+.GereFacture-Options > div{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.GereFacture-Options > div:last-of-type{
+    justify-content: flex-end;
+}
+.GereFacture-Options span{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-family: 'Inter-Bold';
+}
+
+.GereFacture-CheckBox{
+    width: 2em;
+    height: 2em;
+    user-select: none;
+    background-color: var(--White);
+    border: 2px solid var(--Green);
+    cursor: pointer;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+.GereFacture-CheckBox-check{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    transition: all .1s ease;
+    background-color: var(--Green);
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+}
+
+.GereFacture-Button{
+    height: 2.7em;
+    width: 35%;
+    font-family: 'Inter-Bold';
+    transition: all .2s ease;
+    font-size: 1.2em;
+    border: 2px solid var(--Green);
+    background-color: var(--Green);
+    color: var(--White);
+    margin-left: 1em;
+    padding-left: .7em;
+    padding-right: .7em;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+
+.GereFacture-Options input {
+    height: 70%;
+    width: 40%;
+    margin-right: 2%;
+    border: 2px solid var(--Gray);
+    padding-left: .7em;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+
+.GereFacture-Options input:focus {
+    outline: 0;
+}
+
+.GereFacture-Options img {
+    height: 2.5em;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.GereFacture-List{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    border: 2px solid var(--White);
+    overflow-y: scroll;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+
+
+.GereFacture-table{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.GereFacture-table tbody{
+    overflow: scroll;
+    height: 80px;
+}
+.GereFacture-table thead{
+    color: var(--Green);
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+.GereFacture-table thead tr{
+    background-color: var(--Light-Gray);
+    border-radius: .4em .4em 0 0;
+    -webkit-border-radius: .4em .4em 0 0;
+    -moz-border-radius: .4em .4em 0 0;
+    -ms-border-radius: .4em .4em 0 0;
+    -o-border-radius: .4em .4em 0 0;
+}
+
+
+
+.GereFacture-table tbody{
+    background-color: var(--White);
+}
+
+.GereFacture-table td, .GereFacture-table th {
+    border-left: 2px solid var(--Light-Gray);
+    border-right: 2px solid var(--Light-Gray);
+    border-bottom: 1px solid var(--Light-Gray);
+    max-width: 8em;
+}
+.GereFacture-table td b {
+    color: var(--Blue);
+}
+
+.GereFacture-table td:first-child, .GereFacture-table th:first-child {
+    border-left: none;
+    
+}
+
+.GereFacture-table td:last-child, .GereFacture-table th:last-child  {
+    border-right: none;
+}
+.GereFacture-table th{
+    font-family: 'Inter-Bold';
+}
+
+
+.GereFacture-table button{
+    user-select: none;
+    background-color: var(--White);
+    border: 2px solid var(--Green);
+    cursor: pointer;
+    border-radius: .4em;
+    margin: 0 .3em 0 .3em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+.GereFacture-table button > img{
+    filter: invert(58%) sepia(97%) saturate(313%) hue-rotate(110deg) brightness(96%) contrast(97%);
+    -webkit-filter: invert(58%) sepia(97%) saturate(313%) hue-rotate(110deg) brightness(96%) contrast(97%);
+}
+
+.GereFacture-Button:hover{
+    background-color: var(--White);
+    color: var(--Green);
+
+}
+
+.GereFacture-Payed-100{
+    filter: invert(58%) sepia(97%) saturate(313%) hue-rotate(110deg) brightness(96%) contrast(97%);
+}
+.GereFacture-Payed-0{
+    filter: invert(29%) sepia(48%) saturate(6159%) hue-rotate(342deg) brightness(97%) contrast(85%);
+}
+.GereFacture-Payed-Part{
+    display: none;
+}
+
+
+
+@media screen and (max-width:1115px) {
+    .GereFacture-Options span{
+        width: 30%;
+        font-size: 1em;
+    }
+    .GereFacture-Options button{
+        width: 30%;
+    }
+}
+@media screen and (max-width:661px) {
+    .GereFacture-Options{
+        flex-direction: column;
+        height: 7em;
+    }
+    .GereFacture-Options > div:last-of-type{
+        justify-content: flex-start;
+    }
+    .GereFacture-List{
+        margin-top: 3em;
+    }
+}

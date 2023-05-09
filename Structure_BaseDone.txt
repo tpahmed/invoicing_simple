@@ -1,0 +1,45 @@
+Societe :
+	id_societe
+	Raison_S
+	Adresse
+	Email
+	Tel
+	Patente
+
+Client :
+	id_client
+	Nom
+	Adresse
+	Email
+	Tel
+	Id_Nat
+
+Categorie :
+	id_categorie
+	Titre
+	Service
+	
+Produit :
+	id_produit
+	Description
+	Stock
+	Price
+	id_categorie
+
+Invoice :
+	no_inv
+	Date_inv
+	invoiceTo
+	payTo
+	Note
+	Taxes
+	Total
+	Payed
+
+InvoiceProducts :
+	id
+	id_produit
+	no_inv
+	Qty
+	
+	

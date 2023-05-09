@@ -1,0 +1,85 @@
+.Payment{
+    transition: all .3s ease;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    z-index: 10;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.Payment-Modal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    left: 50%;
+    top: 50%;
+    width: 15em;
+    height: 12em;
+    background-color: var(--White);
+    border: 2px solid var(--Gray);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+.Payment-Modal h3{
+    color: var(--Green);
+    font-family: 'Inter-Bold';
+}
+.Payment-Modal input{
+    height: 3em;
+    width: 15em;
+    border: 2px solid var(--Gray);
+    padding-left: .7em;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+.Payment-Modal button{
+    transition: all .2s ease;
+    cursor: pointer;
+    height: 2em;
+    width: 6em;
+    font-size: 1em;
+    font-family: 'Inter-Bold';
+    color: var(--White);
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+.Payment-Modal button:first-of-type{
+    border: 2px solid var(--Green);
+    background-color: var(--Green);
+}
+.Payment-Modal button:first-of-type:hover{
+    background-color: var(--White);
+    color: var(--Green);
+}
+.Payment-Modal button:last-of-type{
+    border: 2px solid var(--Red);
+    background-color: var(--Red);
+}
+.Payment-Modal button:last-of-type:hover{
+    background-color: var(--White);
+    color: var(--Red);
+}

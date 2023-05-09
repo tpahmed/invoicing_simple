@@ -1,0 +1,209 @@
+.ModifierFacture{
+    width: 100%;
+    height: 90%;
+}
+
+
+.ModifierFacture-Line{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.ModifierFacture-Line > input{
+    width: 45%;
+}
+
+.ModifierFacture-Line input,.ModifierFacture-Line textarea{
+    margin-right: 2%;
+    height: 2.7em;
+    font-size: 1.2em;
+    border: 2px solid var(--Gray);
+    padding-left: .7em;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+.ModifierFacture-Line textarea{
+    max-width: 100%;
+
+}
+.ModifierFacture-Line div{
+    width: 40%;
+    font-family: 'Inter-Bold';
+}
+.ModifierFacture-Line img{
+    filter: invert(58%) sepia(97%) saturate(313%) hue-rotate(110deg) brightness(96%) contrast(97%);
+}
+.ModifierFacture-Line > textarea{
+    height: 6.4em;
+    max-width: 100%;
+}
+.ModifierFacture-Button{
+    height: 2.7em;
+    width: 9em;
+    font-family: 'Inter-Bold';
+    transition: all .2s ease;
+    font-size: 1.2em;
+    border: 2px solid var(--Green);
+    background-color: var(--Green);
+    color: var(--White);
+    padding-left: .7em;
+    padding-right: .7em;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+.ModifierFacture-Button:hover{
+    background-color: var(--White);
+    color: var(--Green);
+}
+
+.ModifierFacture-Line:last-child{
+    justify-content: center;
+}
+
+.ModifierFacture-InfoInitial{
+    width: 35% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--White);
+    padding: .5em;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+
+.ModifierFacture-InfoInitial > div{
+    width: 13em;
+}
+.ModifierFacture-InfoInitial span{
+    color: var(--Gray);
+}
+.ModifierFacture-Transaction-Info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 13em;
+}
+
+.ModifierFacture-Transaction-Info:first-of-type > textarea{
+    height: 56%;
+}
+
+.ModifierFacture-Transaction-Info:last-of-type > h4{
+    text-align: right;
+    padding-right: .5em;
+}
+
+
+.ModifierFacture-List{
+    position: relative;
+    width: 100% !important;
+    height: 30em;
+    border: 2px solid var(--Light-Gray);
+    overflow-y: scroll;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+
+.ModifierFacture-table{
+    position: absolute;
+    width: 100%;
+    /* background-color: var(--White); */
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.ModifierFacture-table tbody{
+    overflow: scroll;
+    height: 80px;
+}
+.ModifierFacture-table thead{
+    color: var(--Black);
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+.ModifierFacture-table thead tr{
+    background-color: var(--Light-Gray);
+    border-radius: .4em .4em 0 0;
+    -webkit-border-radius: .4em .4em 0 0;
+    -moz-border-radius: .4em .4em 0 0;
+    -ms-border-radius: .4em .4em 0 0;
+    -o-border-radius: .4em .4em 0 0;
+}
+
+
+
+.ModifierFacture-table tbody{
+    background-color: var(--White);
+}
+
+.ModifierFacture-table td, .ModifierFacture-table th {
+    border-left: 2px solid var(--Light-Gray);
+    border-right: 2px solid var(--Light-Gray);
+    border-bottom: 1px solid var(--Light-Gray);
+}
+
+.ModifierFacture-table td:first-child, .ModifierFacture-table th:first-child {
+    border-left: none;
+    
+}
+
+.ModifierFacture-table td:last-child, .ModifierFacture-table th:last-child  {
+    border-right: none;
+}
+.ModifierFacture-table th{
+    font-family: 'Inter-Bold';
+}
+
+.ModifierFacture-table tr{
+    height: 2.5em;
+}
+
+#ModifierFacture-Tax{
+    width: 3em;
+}
+
+.react-datalist-input__listbox-option {
+    border:  2px solid var(--Gray);
+    list-style: none;
+    font-size: 1.3em;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+.react-datalist-input__listbox-option:hover{
+    background-color: var(--Light-Gray);
+}
+.react-datalist-input__listbox-option mark{
+    background-color: var(--Green);
+    width: 100%;
+}
+
+
+@media sModifiern and (max-width:855px) {
+    .ModifierFacture-InfoInitial{
+        width: 60% !important;
+    }
+}

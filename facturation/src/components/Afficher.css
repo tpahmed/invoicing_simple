@@ -1,0 +1,158 @@
+.AfficherFacture{
+    width: 100%;
+    height: 100%;
+    background-color: var(--Light-Gray);
+    max-width: 880px;
+    padding: 30px 15px;
+    margin: auto;
+}
+
+.AfficherFacture-Facture{
+    background-color: var(--White);
+    padding: 50px;
+    border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+
+
+.AfficherFacture-Facture-Line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AfficherFacture-Facture-Line div {
+    margin-top: 1em;
+    max-width: 15em;
+}
+
+.AfficherFacture hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: var(--Light-Gray);
+}
+
+.AfficherFacture p {
+    color: var(--Gray);
+}
+.AfficherFacture-Facture-Table{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-radius: .4em;
+    overflow: hidden;
+    -webkit-border-radius: .4em;
+    -moz-border-radius: .4em;
+    -ms-border-radius: .4em;
+    -o-border-radius: .4em;
+}
+
+.AfficherFacture-Facture-Table table {
+    border: 1px solid var(--Light-Gray);
+    border-collapse: collapse;
+    width: 100%;
+    font-size: .7em;
+}
+.AfficherFacture-Facture-Table table th {
+    background-color: var(--Light-Gray);
+    padding: 1.5em;
+    text-align: left;
+    font-size: 1.2em;
+}
+.AfficherFacture-Facture-Table table tr {
+    height: 2em;
+    border-bottom: 1px solid var(--Light-Gray);
+}
+.AfficherFacture-Facture-Table table td {
+    max-width: 12em;
+    padding: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--Gray);
+}
+.AfficherFacture-Facture-Table td:last-child {
+    text-align: right;
+}
+
+.AfficherFacture-Facture-Table tfoot th {
+    padding: .7em;
+    padding-right: 1.5em;
+}
+
+.AfficherFacture-Facture-Table tfoot th:last-child {
+    text-align: right;
+}
+
+.AfficherFacture-Facture-Note{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3em;
+    padding: 1em;
+}
+.AfficherFacture-Facture-Note div{
+    margin-left: 1em;
+}
+
+.AfficherFacture-Facture-Options{
+    display: flex;
+    justify-content: center;
+    height: 2.5em;
+}
+.AfficherFacture-Facture-Options button{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border: 0;
+    cursor: pointer;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+#AfficherFacture-Facture-Options-Telecharger{
+    color: var(--White);
+    background-color: var(--Green);
+    border-radius: 0 .4em .4em 0;
+    -webkit-border-radius: 0 .4em .4em 0;
+    -moz-border-radius: 0 .4em .4em 0;
+    -ms-border-radius: 0 .4em .4em 0;
+    -o-border-radius: 0 .4em .4em 0;
+}
+
+#AfficherFacture-Facture-Options-Telecharger:hover{
+    filter: saturate(80%);
+    -webkit-filter: saturate(80%);
+}
+
+#AfficherFacture-Facture-Options-Telecharger img{
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(204deg) brightness(102%) contrast(101%);
+}
+
+#AfficherFacture-Facture-Options-Imprimer{
+    background-color: rgba(42, 209, 157, 0.15);
+    border-radius: .4em 0 0 .4em;
+    -webkit-border-radius: .4em 0 0 .4em;
+    -moz-border-radius: .4em 0 0 .4em;
+    -ms-border-radius: .4em 0 0 .4em;
+    -o-border-radius: .4em 0 0 .4em;
+}
+#AfficherFacture-Facture-Options-Imprimer:hover{
+    background-color: rgba(42, 209, 157, 0.3);
+}
+
+@media screen and (max-width:766px) {
+    .AfficherFacture-Facture-Table tfoot td{
+        display: none;
+    }
+}
+
+@media print {
+    .AfficherFacture-Facture-Options{  display:none; }
+}
