@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import DatalistInput from 'react-datalist-input';
 import jsPDF from 'jspdf';
@@ -25,6 +25,7 @@ export default function CreeFacture() {
     const [ClientAddress,SetClientAddress] = useState('');
     const [Tax,SetTax] = useState(20);
     const Navigator = useNavigate();
+    const Location = useLocation();
     const dt = new Date();
     
 
@@ -65,7 +66,7 @@ export default function CreeFacture() {
     const Print = async ()=>{
         await Cree();
         const PageToPrint = document.getElementById('CreeFacture-Print-page');
-        PageToPrint.src = `http://localhost:5173/facture/view/F${dt.getFullYear()}${Facture.no_inv}`;
+        PageToPrint.src = `//${window.location.host}/facture/view/F${dt.getFullYear()}${Facture.no_inv}`;
         const LoadingWaiter = ()=>{
             const ContentToPrint = PageToPrint.contentWindow || PageToPrint;
             if (ContentToPrint.document.body.querySelector(".AfficherFacture-Facture-Line p") && ContentToPrint.document.body.querySelector(".AfficherFacture-Facture-Line p").textContent.trim()){
