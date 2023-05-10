@@ -29,15 +29,15 @@ export default function ModifierFacture() {
     
 
     
-    const AjouterProd = ()=>{
+    const AjouterProd = async ()=>{
         if (!Categories.filter(e=>e.id === Categorie).length){
-            axios.post('//localhost:4444/cat',{Categorie});
+            await axios.post('//localhost:4444/cat',{Categorie});
         }
         if (!Produits.filter(e=>e.id === ProduitDescription).length){
-            axios.post('//localhost:4444/Produit',{Categorie,ProduitDescription,ProduitPrice});
+            await axios.post('//localhost:4444/Produit',{Categorie,ProduitDescription,ProduitPrice});
         }
         else{
-            axios.post('//localhost:4444/Produit/edit',{Categorie,ProduitDescription,ProduitPrice});
+            await axios.post('//localhost:4444/Produit/edit',{Categorie,ProduitDescription,ProduitPrice});
         }
         SetProduitsCommander([...ProduitsCommander,{no_inv:`${Facture.no_inv}`,Item:Categorie,Description:ProduitDescription,Qte:ProduitQty,Price:ProduitPrice,Total:ProduitQty*ProduitPrice}]);
         SetCategorie('');
